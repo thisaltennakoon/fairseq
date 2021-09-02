@@ -369,11 +369,8 @@ def post_process(sentence: str, symbol: str):
         pass
     elif symbol is not None:
         raise NotImplementedError(f"Unknown post_process option: {symbol}")
-    print("000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-    sentence=sentence.replace("\u0DCA \u0dbb", "\u0DCA\u200D\u0dbb")
-    print("111111111111111111111111111111111111111111111111111111111111111111111111111111111111111")
-    sentence=sentence.replace("\u0DCA \u0dba", "\u0DCA\u200D\u0dba")
-    print("222222222222222222222222222222222222222222222222222222222222222222222222222222222222222")
+    sentence=sentence.replace("\u0dca\u0020\u0dbb", "\u0DCA\u200D\u0dbb")
+    sentence=sentence.replace("\u0dca\u0020\u0dba", "\u0DCA\u200D\u0dba")
     return sentence
 
 
